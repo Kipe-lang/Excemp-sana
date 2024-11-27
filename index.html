@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keypee Mahinay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Gawa ko po ito naghihingalo</h1>
+</header>
+<table>
+    <tr>
+        <td><div class="marquee-left">Now premiering</div></td>
+        <td><div class="marquee-right">Mababaliw na sa coding</div></td>
+    </tr>
+    <tr>
+        <td><div class="bounce">Boogsh pagod</div></td>
+        <td><div class="sidetoside-color">Kaawan sana</div></td>
+    </tr>
+    <tr>
+        <td><div class="go-up">Patapos na</div></td>
+        <td><div class="go-down">Ayaw ko na(jk)</div></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <div class="up-down">Kunwari bola to</div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <div class="box"></div>
+        </td>
+    </tr>
+</table>
+
+<div>
+    <button id="pause">Pause</button>
+    <button id="play">Play</button>
+</div>
+
+<script>
+    const animations = document.querySelectorAll('div');
+    const pauseButton = document.getElementById('pause');
+    const playButton = document.getElementById('play');
+
+    pauseButton.addEventListener('click', () => {
+        animations.forEach(animation => {
+            animation.classList.add('paused');
+        });
+    });
+
+    playButton.addEventListener('click', () => {
+        animations.forEach(animation => {
+            animation.classList.remove('paused');
+        });
+    });
+</script>

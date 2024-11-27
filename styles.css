@@ -1,0 +1,107 @@
+body {
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+h1 {
+    position: center;
+    margin: 0;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+table {
+    border-collapse: collapse;
+    width: 50%;
+    border: 4px solid #333;
+}
+td {
+    border: 1px solid #333;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 20px;
+}
+.marquee-left {
+    position: absolute;
+    white-space: nowrap;
+    animation: marquee-left 5s linear infinite;
+}
+.marquee-right {
+    position: absolute;
+    white-space: nowrap;
+    animation: marquee-right 5s linear infinite;
+}
+.bounce {
+    position: absolute;
+    animation: bounce 2.5s infinite;
+}
+.sidetoside-color {
+    position: absolute;
+    animation: sidetoside-color 2.5s infinite;
+}
+.go-up {
+    position: absolute;
+    animation: go-up 5s linear infinite;
+}
+.go-down {
+    position: absolute;
+    animation: go-down 5s linear infinite;
+}
+.up-down {
+    position: absolute;
+    animation: up-down 2.5s infinite;
+}
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    animation: bounce-box 2.5s infinite;
+}
+@keyframes marquee-left {
+    0% { left: 100%; }
+    100% { left: -100%; }
+}
+@keyframes marquee-right {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+@keyframes bounce {
+    0%, 100% { left: 0; }
+    50% { left: 235px; }
+}
+@keyframes sidetoside-color {
+    0%, 100% { left: 0; color: rgb(255, 0, 212); }
+    50% { left: 240px; color:rgb(255, 123, 0); }
+}
+@keyframes go-up {
+    0% { top: 100%; }
+    100% { top: -10%; }
+}
+@keyframes go-down {
+    0% { top: -10%; }
+    100% { top: 100%; }
+}
+@keyframes up-down {
+    0%, 100% { top: 0; }
+    50% { top: 45px; }
+}
+@keyframes bounce-box {
+    0%, 100% { left: 0; background-color: rgb(255, 136, 0); }
+    50% { left: calc(100% - 50px); background-color: rgb(255, 0, 221); }
+}
+.paused {
+    animation-play-state: paused;
+}
